@@ -29,6 +29,10 @@ For most drivers, this is all you need:
 
     ckanext.cloudstorage.driver_options = {"key": "<your public key>", "secret": "<your secret key>"}
 
+You also need the Azure Storage Connection Link, which is very similar in most scenarios to your driver options. The config value should be an unquoted string with key=values separated by semi-colons:
+
+    ckanext.cloudstorage.connection_link = AccountName=<your public key>;AccountKey=<your secret key>
+
 # Support
 
 Most libcloud-based providers should work out of the box, but only those listed
