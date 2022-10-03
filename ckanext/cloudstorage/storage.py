@@ -260,6 +260,8 @@ class ResourceCloudStorage(CloudStorage):
                 self.file_upload = _get_underlying_file(upload_field_storage)
                 resource['url'] = self.filename
                 resource['url_type'] = 'upload'
+            else:
+                resource['url_type'] = ''
         elif multipart_name and self.can_use_advanced_aws:
             # This means that file was successfully uploaded and stored
             # at cloud.
